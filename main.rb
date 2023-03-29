@@ -26,9 +26,8 @@ until input == "exit"
             puts "Este es tu array: #{array}"
         when "update" # ["update", "1", "g"]
             array[input_array[1].to_i]=input_array[2]
-            p array
         when "delete"
-            puts "deleted"
+            array.delete_at(input_array[1].to_i)
         when "exit"
             puts "ve con Dios"
         else
