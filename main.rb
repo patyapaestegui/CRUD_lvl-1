@@ -9,14 +9,21 @@ puts "Welcome"
 # debo ir a hacerte un diploma porq ya estás para graduarte de mis clases
 
 input = ""
+array = []
+
 until input == "exit"
     puts "| add | read | update | delete | exit |"
-    input = gets.chomp
-    case input
+    input = gets.chomp # "add g" [add,g]
+    # exprime el input
+    
+    input_array = input.split(" ")
+
+
+    case input_array[0]
         when "add"
-            puts "added"
+            array << input_array[1]
         when "read"
-            puts "readed"
+            puts "Este es tu array: #{array}"
         when "update"
             puts "updated"
         when "delete"
