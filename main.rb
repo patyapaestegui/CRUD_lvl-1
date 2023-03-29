@@ -24,8 +24,9 @@ until input == "exit"
             array << input_array[1]
         when "read"
             puts "Este es tu array: #{array}"
-        when "update"
-            puts "updated"
+        when "update" # ["update", "1", "g"]
+            array[input_array[1].to_i]=input_array[2]
+            p array
         when "delete"
             puts "deleted"
         when "exit"
